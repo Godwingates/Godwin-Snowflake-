@@ -76,7 +76,33 @@ a:hover {
         border-radius: 20px;
         font-weight: bold;
     }
-    
+    .image-container {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      animation: moveImage 8s linear infinite;
+    }
+    .image-contain img{
+        width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @keyframes moveImage {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(-100%); }
+      100% { transform: translateX(0); }
+    }
+
+    .description {
+      text-align: center;
+      padding: 20px;
+    }
         
     
     button:hover{
@@ -121,6 +147,44 @@ a:hover {
             Recording artist and song writer under Love Texture Music Management, Aqsam pan production as the Audio Logo
 Real name is Tumusiime Willy born 2003 in Bunyangabu District, Rwimi Town Council.</p>
         </div>
+        <div class="image-container">
+    <img src="logo.jpg" alt="Image 1">
+  </div>
+
+  <div class="description">
+    <p><h2>Prince Willz  Musical Journey!</h2>
+
+  <p>Dear music lovers and friends,</p>
+
+  It's with immense joy and gratitude that I share my musical journey with you. Music has been my lifelong passion, a language through which I express emotions, tell stories, and connect with the world.
+
+  From the soulful melodies to the rhythmic beats, my goal is to create an immersive experience that resonates with your hearts. Each composition is a piece of my soul, and I hope it becomes a soundtrack to moments in your life.
+
+  
+
+
+  </div>
+
+  <div class="image-container">
+    <img src="diehards.jpg" alt="Image 2">
+  </div>
+
+  <div class="description">
+    <p>Thank you for joining me on this adventure. Your support means the world to me, and I can't wait to share more music, memories, and melodies with you.
+
+  Let the music speak, and let our hearts dance together!
+
+  <p class="quote">"Music is the divine way to tell beautiful, poetic things to the heart." - Pablo Casals</p>
+  <div class="image-contain">
+    <img src="logo_1.jpg" alt="Image 1">
+  </div>
+
+  <div class="description">
+    <p><h2></h2>
+
+  <p>Dear music lovers and friends, thanks for supporting the love texture music</p>
+
+  </div>
         <h2>Welcome to Love Texture Music</h2>
         <p>Your source for amazing music experiences.
         Click the button below to listen to our music</p></br>

@@ -88,31 +88,81 @@
         box-shadow: 0 0 5px gold, 0 0 20px gold,
                     0 0 40px gold, 0 0 90px gold;
     }
+      ul.navbar {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    /* Style for the navigation bar links */
+    ul.navbar li {
+      float: left;
+    }
+
+    ul.navbar li a, .dropdown-content a {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    ul.navbar li a:hover, .dropdown-content a:hover {
+      background-color: blue;
+    }
+
+    /* Style for the dropdown */
+    .dropdown {
+      display: block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #333;
+      min-width: 160px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .navbar li:hover .dropdown-content {
+      display: inline-block;
+      
+    }
        
     
   </style>
+  </head>
   <header>
       <h1>Prince willz Music Playlist</h1>
-    <div class="links">
-      <ul>
-          <li><a href="index.html"> Home</a> </li>
-          <li><a href="playlist.html"> Playlist</a> </li>
-          <li><a href="uploaded.html"> upload your music</a> </li>
-          <li><a href="join us.html"> join us</a> </li>
-          <a href="About.html">About Us</a>
-          <li><a href="contact us.html"> Contact us</a> </li>
-      </ul>
+    
+      
+              <ul class="navbar">
+    <li class="dropdown">
+      <a href="#" class="dropbtn">Menu</a>
+      <div class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="About.html">About</a>
+        <a href="hire.html">Hire us</a>
+        <a href="join us.html">join us</a>
+        <a href="contact us.html">Contact Us</a>
+        <a href="uploaded.html">upload your music</a>
+      
+    </li>
+  </ul>
   </div>
 </header>
   
-</head>
+
 <body>
 
-  <h2>My Playlist</h1>
+  <h2>My Playlist</h2>
 
-  <ul class="playlist">
+  <div class="playlist">
     <li class="song">
-      <img src="./img/prince.jpg" alt="Artist 1">
+      <img src="prince.jpg" alt="Artist 1">
       <div class="song-details">
         <h3>Prince Willz - Baby Nah</h3>
         <audio controls>
@@ -178,7 +228,7 @@
       <div class="song-details">
         <h3>Prince willz ft Vikmatic - Bitware</h3>
         <audio controls>
-          <source src="Bitware__Vikmatic_ft_Prince_Willz_Official.mp3" type="audio/mp3">
+          <source src="Bitware_prince willz ft vikmatic.mp3" type="audio/mp3">
           Your browser does not support the audio tag.
         </audio>
         <button class="download-button">Download</button>
