@@ -61,10 +61,14 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+            margin-top: 14px;
+            
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: cyan;
+            box-shadow: 0 0 10px cyan, 0 0 10px cyan;
+            font-weight: bold;
         }
          footer {
             background-color: #333;
@@ -99,7 +103,11 @@
     <label for="name">Your Name:</label>
     <input type="text" id="name" name="name" required>
     <label for="location">Enter your location:</label>
-    <input type="location" id="email" name="email" required>
+      <input type="location" id="location" name="location" required>
+    
+    <label for="phone">Enter your phone number:</label>
+    
+    <input type="phone" id="phone" name="Enter phone number" required>
 
     <label for="email">Your Email:</label>
     <input type="email" id="email" name="email" required>
