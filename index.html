@@ -103,6 +103,99 @@ a:hover {
       text-align: center;
       padding: 20px;
     }
+    .omg{
+        display: inline;
+        height: auto;
+        width: 100%;
+    }
+    .omgo{
+        display: inline-block;
+        height: auto;
+        width: 100%;
+    
+    }
+    
+    
+    .player {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .cover img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .info {
+      margin-top: 20px;
+    }
+
+    h1, h3, h4 {
+      margin: 0;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    h3 {
+      color: #666;
+    }
+
+    h4 {
+      color: #999;
+    }
+
+    #song-title {
+      color: #333;
+      margin-top: 10px;
+    }
+
+    .button-items {
+      margin-top: 20px;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      background-color: cyan;
+    }
+
+    svg {
+      border: 1px solid #333;
+      background-color: cyan;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .social {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .social a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .social a:hover {
+      text-decoration: underline;
+    }
+    
+    
+    
+    
         
     
     button:hover{
@@ -183,8 +276,73 @@ Real name is Tumusiime Willy born 2003 in Bunyangabu District, Rwimi Town Counci
     <p><h2></h2>
 
   <p>Dear music lovers and friends, thanks for supporting the love texture music</p>
+  
+  
+  
+  
+  
 
-  </div>
+
+    
+    
+ 
+
+<div class="player">
+  <ul>
+    <li class="cover" id="cover"><img src="willz.jpg" alt="Cover Image"/></li>
+    <li class="info">
+      <h2>Love Texture Music New Release</h2>
+      <h4>Premiere</h4>
+      <h3 id="song-title">Baby Nah</h3>
+      <div class="button-items">
+        <audio id="music" preload="auto" loop="false">
+          <!-- Add your audio sources here -->
+        </audio>
+        <div id="slider"><div id="elapsed"></div></div>
+        <p id="timer">0:00</p>
+        <div class="controls">
+          <span class="expend">
+            <svg class="step-backward" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 3H4C2.89543 3 2 3.89543 2 5V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V5C22 3.89543 21.1046 3 20 3ZM4 19H20V5H4V19ZM15 16L11 12L15 8V16Z"/>
+            </svg>
+          </span>
+
+          <svg id="play" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 22V2L21 12L3 22Z"/>
+          </svg>
+
+          <svg id="pause" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <rect x="6" y="4.6" width="3.8" height="15.7"/>
+            <rect x="14" y="4.6" width="3.9" height="15.7"/>
+          </svg>
+
+          <span class="expend">
+            <svg class="step-foreward" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 3H20C21.1046 3 22 3.89543 22 5V19C22 20.1046 21.1046 21 20 21H4C2.89543 21 2 20.1046 2 19V5C2 3.89543 2.89543 3 4 3ZM20 19H4V5H20V19ZM9 16L5 12L9 8V16Z"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<p class="social">
+  <a target="_blank" href="https://twitter.com/Godwin Foden" class="twitter">Twitter</a> |
+  <a target="_blank" href="https://github.com/Godwingates" class="github">Github</a>
+</p>
+
+
+
+  
+  
+  
+  
+  
+   
+     
+
+  
         <h2>Welcome to Love Texture Music</h2>
         <p>Your source for amazing music experiences.
         Click the button below to listen to our music</p></br>
@@ -196,6 +354,90 @@ Real name is Tumusiime Willy born 2003 in Bunyangabu District, Rwimi Town Counci
     <br>
     <br>
     <div="footer">
+        
+        
+        
+        <script>
+  var music = document.getElementById("music");
+  var playButton = document.getElementById("play");
+  var pauseButton = document.getElementById("pause");
+  var playhead = document.getElementById("elapsed");
+  var timeline = document.getElementById("slider");
+  var timer = document.getElementById("timer");
+  var duration;
+  var currentSongIndex = 0;
+  var playlist = [
+    { src: "Baby_Nah.mp3", title: "Baby Nah", cover: "prince_willz.jpg" },
+    { src: "Bimpe - Prince Willz.mp3", title: "Bimpe", cover: "willz.jpg" },
+    { src: "Tombula - Prince Willz.mp3", title: "Tombula", cover: "prince_willz.jpg" },
+    { src: "Nzikakane - Prince Willz & Doro Weiyz.mp3", title: "Nzikakane", cover: "diehards.jpg" },
+    { src: "Bitware_prince willz ft vikmatic.mp3", title: "Bitware", cover: "logo.jpg" },
+    { src: "WOOLI_PRINCE_WILLZ_FT_ABY_LABY_2023(OFFICIAL_LYRIC_VIDEO)(360p).mp3", title: "Wooli", cover: "diehards.jpg" },
+    
+    // Add cover images for other songs
+  ];
+
+  pauseButton.style.visibility = "hidden";
+  var timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
+
+  music.addEventListener("timeupdate", timeUpdate, false);
+
+  function timeUpdate() {
+    var playPercent = timelineWidth * (music.currentTime / duration);
+    playhead.style.width = playPercent + "px";
+
+    var secondsIn = Math.floor(((music.currentTime / duration) / 3.5) * 100);
+
+    if (secondsIn <= 9) {
+      timer.innerHTML = "0:0" + secondsIn;
+    } else {
+      timer.innerHTML = "0:" + secondsIn;
+    }
+  }
+
+  function playSong(index) {
+    music.src = playlist[index].src;
+    music.play();
+    playButton.style.visibility = "hidden";
+    pauseButton.style.visibility = "visible";
+    document.getElementById("song-title").innerHTML = playlist[index].title;
+    document.getElementById("cover").innerHTML = `<img src="${playlist[index].cover}" alt="Cover Image"/>`;
+    currentSongIndex = index;
+  }
+
+  
+        
+        playButton.onclick = function () {
+    playSong(currentSongIndex);
+  }
+
+  pauseButton.onclick = function () {
+    music.pause();
+    playButton.style.visibility = "visible";
+    pauseButton.style.visibility = "hidden";
+  }
+
+  music.addEventListener("canplaythrough", function () {
+    duration = music.duration;
+  }, false);
+
+  document.querySelector('.step-foreward').addEventListener('click', function () {
+    currentSongIndex = (currentSongIndex + 1) % playlist.length;
+    playSong(currentSongIndex);
+  });
+
+  document.querySelector('.step-backward').addEventListener('click', function () {
+    currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
+    playSong(currentSongIndex);
+  });
+  
+  alert("Hello, Welcome to my love texture music website, listen to the most soothing music of prince Willz and other artists in the association. press ok to continue :)")
+</script>
+
+
+
+
+
  
 
 <footer>
