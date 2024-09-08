@@ -1,0 +1,261 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background: linear-gradient(90deg, #6a1b9a, #d500f9);
+    color: white;
+}
+
+.logo img {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+}
+
+.welcome-text h1 {
+    font-size: 1.5em; /* Adjust size as needed */
+    font-weight: bold;
+    margin: 0;
+}
+
+.menu-icon {
+    font-size: 2em; /* Increase icon size */
+    color: white;
+    cursor: pointer;
+    border: 2px solid white; /* Border color and width */
+    border-radius: 5px; /* Rounded corners */
+    padding: 0.5em; /* Space around the icon */
+}
+
+/* Overlay Styles */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Navigation Menu Styles */
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: white;
+    color: black;
+    padding: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-menu.show {
+    display: block;
+}
+
+/* Hero Section Styles */
+.hero {
+    position: relative;
+}
+
+.photo-slider {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+.fade {
+    animation: fade 1.5s ease-in-out infinite;
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* CTA Button Styles */
+.cta {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.cta button {
+    padding: 0.75em 2em;
+    font-size: 1.2em;
+    background-color: #ff4081;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta button:hover {
+    background-color: #e040fb;
+}
+
+/* New Release Section Styles */
+.new-release {
+    padding: 2em;
+    text-align: center;
+}
+
+.release-thumbnail {
+    margin-bottom: 1em;
+}
+
+.release-thumbnail img {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+}
+
+/* Upcoming Events Section Styles */
+.events {
+    padding: 2em;
+    background: #f5f5f5;
+}
+
+.events ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.events li {
+    margin: 1em 0;
+}
+
+/* Merchandise Section Styles */
+.merchandise {
+    padding: 2em;
+    background: #f5f5f5;
+}
+
+.merch-item {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.merch-item img {
+    width: 200px; /* Adjust size as needed */
+    height: auto;
+}
+
+.merch-item button {
+    padding: 0.5em 1.5em;
+    font-size: 1em;
+    background-color: #ff4081;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.merch-item button:hover {
+    background-color: #e040fb;
+}
+
+/* Biography Section Styles */
+.biography {
+    padding: 2em;
+}
+
+.biography p {
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.6;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: white;
+    padding: 2em;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.social-media a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+.newsletter form {
+    margin: 1em 0;
+}
+
+.newsletter input {
+    padding: 0.5em;
+    border: none;
+    border-radius: 4px;
+}
+
+.newsletter button {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    background: #ff4081;
+    color: white;
+    cursor: pointer;
+}
+
+.newsletter button:hover {
+    background: #e040fb;
+}
+.listen-now{
+      padding: 0.5em 1.5em;
+    font-size: 1em;
+    background-color: #ff4081;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.listen-now:hover{
+    background: #e040fb;
+}
