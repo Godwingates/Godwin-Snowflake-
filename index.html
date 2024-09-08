@@ -1,453 +1,153 @@
-
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Love Texture Music</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
-        h1{
-            text-shadow: 20px 20px 2px lime;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em;
-        }
-        
-        nav {
-            text-align: center;
-            padding: 1em;
-            background-color: #444;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 1em;
-        }
-
-        section {
-            padding: 2em;
-            text-align: center;
-        }
-
-        .artist-info {
-            margin-bottom: 2em;
-        }
-
-        .artist-photo {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 1em;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 0px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        a {
-    color: #0066cc;
-    text-decoration: none;
-    border-bottom: 1px solid #ddd;
-    transition: color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-}
-
-a:hover {
-    color: #004080;
-    border-color: #004080;
-}           
-    button {
-        height: 50px;
-        background-image: radial-gradient(yellow, hotpink);
-        border-radius: 20px;
-        font-weight: bold;
-    }
-    .image-container {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .image-container img {
-      width: 100%;
-      height: auto;
-      display: block;
-      animation: moveImage 8s linear infinite;
-    }
-    .image-contain img{
-        width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    @keyframes moveImage {
-      0% { transform: translateX(0); }
-      50% { transform: translateX(-100%); }
-      100% { transform: translateX(0); }
-    }
-
-    .description {
-      text-align: center;
-      padding: 20px;
-    }
-    .omg{
-        display: inline;
-        height: auto;
-        width: 100%;
-    }
-    .omgo{
-        display: inline-block;
-        height: auto;
-        width: 100%;
-    
-    }
-    
-    
-    .player {
-      max-width: 600px;
-      margin: 50px auto;
-      background-color: #fff;
-      padding: 20px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .cover img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-
-    .info {
-      margin-top: 20px;
-    }
-
-    h1, h3, h4 {
-      margin: 0;
-    }
-
-    h2 {
-      color: #333;
-    }
-
-    h3 {
-      color: #666;
-    }
-
-    h4 {
-      color: #999;
-    }
-
-    #song-title {
-      color: #333;
-      margin-top: 10px;
-    }
-
-    .button-items {
-      margin-top: 20px;
-    }
-
-    .controls {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 10px;
-      background-color: cyan;
-    }
-
-    svg {
-      border: 1px solid #333;
-      background-color: cyan;
-      width: 30px;
-      height: 30px;
-      cursor: pointer;
-    }
-
-    audio {
-      width: 100%;
-      margin-top: 20px;
-    }
-
-    .social {
-      text-align: center;
-      margin-top: 20px;
-    }
-
-    .social a {
-      color: #333;
-      text-decoration: none;
-    }
-
-    .social a:hover {
-      text-decoration: underline;
-    }
-    
-    
-    
-    
-        
-    
-    button:hover{
-        background: aqua;
-        box-shadow: 0 0 5px aqua, 0 0 20px aqua,
-                    0 0 40px aqua,
-                    0 0 90px aqua;
-                    
-    }
-
-        footer ul {
-            display: flex;
-            justify-content: center;
-            padding: 0;
-        }
-
-        footer li {
-            margin: 0 15px;
-        }
-    </style>
+    <title>Prince Willz - Home</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    <div class="overlay" onclick="closeMenu()"></div>
     <header>
-        <h1>Welcome To Love Texture Music</h1>
+        <div class="logo">
+            <img src="logo.jpg" alt="Prince Willz Logo">
+        </div>
+        <div class="welcome-text">
+            <h1>Love Texture Music  Prince Willz</h1>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
     </header>
-    <nav>
-        <a href="index.html"> Home</a>
-        <a href="playlist.html">Playlist</a>
-        <a href="About.html">About Us</a>
-        <a href="contact us.html">Contact Us</a>
-        <a href="join us.html">Join Us</a>
-        <a href="hire.html">Hire Us</a>
-        
+
+    <nav class="nav-menu">
+        <a href="About.html">About</a>
+        <a href="playlist.html">Music</a>
+        <a href="#">Tour</a>
+        <a href="contact.html">Contact</a>
+        <a href="hire.html">Hire  us</a>
+        <a href="privacy policy.html">privacy</a>
     </nav>
-    <section>
-        <div class="artist-info">
-            <img src="prince_willz.jpg" alt="Prince Willz" class="artist-photo">
-            <h2>Prince Willz</h2>
-            <p>Experience the mesmerizing tunes and unique style of Prince Willz.
-            Founder of Love Texture Music Association and Management and Texture Dancers Crew</br>
-            Recording artist and song writer under Love Texture Music Management, Aqsam pan production as the Audio Logo
-Real name is Tumusiime Willy born 2003 in Bunyangabu District, Rwimi Town Council.</p>
+
+    <section class="hero">
+        <div class="photo-slider">
+            <div class="slide fade">
+                <img src="logo_1.jpg" alt="Prince Willz Photo 1">
+            </div>
+            <div class="slide fade">
+                <img src="prince_willz.jpg" alt="Prince Willz Photo 2">
+            </div>
+            <div class="slide fade">
+                <img src="logo_1.jpg" alt="Prince Willz Photo 3">
+            </div>
+            <div class="slide fade">
+                <img src="willz.jpg" alt="Prince Willz Photo 4">
+            </div>
         </div>
-        <div class="image-container">
-    <img src="logo.jpg" alt="Image 1">
-  </div>
-
-  <div class="description">
-    <p><h2>Prince Willz  Musical Journey!</h2>
-
-  <p>Dear music lovers and friends,</p>
-
-  It's with immense joy and gratitude that I share my musical journey with you. Music has been my lifelong passion, a language through which I express emotions, tell stories, and connect with the world.
-
-  From the soulful melodies to the rhythmic beats, my goal is to create an immersive experience that resonates with your hearts. Each composition is a piece of my soul, and I hope it becomes a soundtrack to moments in your life.
-
-  
-
-
-  </div>
-
-  <div class="image-container">
-    <img src="diehards.jpg" alt="Image 2">
-  </div>
-
-  <div class="description">
-    <p>Thank you for joining me on this adventure. Your support means the world to me, and I can't wait to share more music, memories, and melodies with you.
-
-  Let the music speak, and let our hearts dance together!
-
-  <p class="quote">"Music is the divine way to tell beautiful, poetic things to the heart." - Pablo Casals</p>
-  <div class="image-contain">
-    <img src="logo_1.jpg" alt="Image 1">
-  </div>
-
-  <div class="description">
-    <p><h2></h2>
-
-  <p>Dear music lovers and friends, thanks for supporting the love texture music</p>
-  
-  
-  
-  
-  
-
-
-    
-    
- 
-
-<div class="player">
-  <ul>
-    <li class="cover" id="cover"><img src="willz.jpg" alt="Cover Image"/></li>
-    <li class="info">
-      <h2>Love Texture Music New Release</h2>
-      <h4>Premiere</h4>
-      <h3 id="song-title">Baby Nah</h3>
-      <div class="button-items">
-        <audio id="music" preload="auto" loop="false">
-          <!-- Add your audio sources here -->
-        </audio>
-        <div id="slider"><div id="elapsed"></div></div>
-        <p id="timer">0:00</p>
-        <div class="controls">
-          <span class="expend">
-            <svg class="step-backward" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 3H4C2.89543 3 2 3.89543 2 5V19C2 20.1046 2.89543 21 4 21H20C21.1046 21 22 20.1046 22 19V5C22 3.89543 21.1046 3 20 3ZM4 19H20V5H4V19ZM15 16L11 12L15 8V16Z"/>
-            </svg>
-          </span>
-
-          <svg id="play" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 22V2L21 12L3 22Z"/>
-          </svg>
-
-          <svg id="pause" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <rect x="6" y="4.6" width="3.8" height="15.7"/>
-            <rect x="14" y="4.6" width="3.9" height="15.7"/>
-          </svg>
-
-          <span class="expend">
-            <svg class="step-foreward" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 3H20C21.1046 3 22 3.89543 22 5V19C22 20.1046 21.1046 21 20 21H4C2.89543 21 2 20.1046 2 19V5C2 3.89543 2.89543 3 4 3ZM20 19H4V5H20V19ZM9 16L5 12L9 8V16Z"/>
-            </svg>
-          </span>
+        <div class="cta">
+            <button onclick="location.href='playlist.html'">Listen Now</button>
         </div>
-      </div>
-    </li>
-  </ul>
-</div>
+    </section>
 
-<p class="social">
-  <a target="_blank" href="https://twitter.com/Godwin Foden" class="twitter">Twitter</a> |
-  <a target="_blank" href="https://github.com/Godwingates" class="github">Github</a>
-</p>
+    <section class="new-release">
+    <h2>Latest Release</h2>
+    <div class="release-thumbnail">
+        <img src="willz.jpg" alt="Album Cover">
+        <p>SHERRY -"Sherry" is a fresh release by Prince Willz, showcasing his unique sound and creative style. The song features a blend of catchy melodies and heartfelt lyrics, offering listeners a vibrant and emotional musical experience.</p>
+    </div>
+    <button class="listen-now" onclick="location.href='playlist.html'">Listen Now</button>
+</section>
 
+    <section class="events">
+        <h2>Upcoming Events</h2>
+        <ul>
+            <li><strong>Friday Night:</strong> 13th sep 2024, Club Jamaica</li>
+            <li><strong>Event 2:</strong> Date, kakyinga</li>
+            <!-- Add more events as needed -->
+        </ul>
+    </section>
 
+    <section class="merchandise">
+        <h2>Merchandise</h2>
+        <div class="merch-item">
+            <img src="Prince Willz_20240909_004107_0000.png" alt="Merchandise Item 1">
+            <p>You can buy our T-shirt here at very low costs and a discount of 10%</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="merch-item">
+            <img src="black.png" alt="Merchandise Item 1">
+            <p>You can buy our T-shirt here at very low costs and a discount of 10%</p>
+            <button>Buy Now</button>
+        </div>
+        <div class="merch-item">
+            <img src="brown.png" alt="Merchandise Item 1">
+            <p>You can buy our T-shirt here at very low costs and a discount of 10%</p>
+            <button>Buy Now</button>
+        </div>
+        <!-- Add more merchandise items -->
+    </section>
 
-  
-  
-  
-  
-  
-   
-     
+    <section class="biography">
+        <h2>About Prince Willz</h2>
+        <p>Prince Willz, born on September 9, 2002, is an emerging artist and the founder of the Love Texture Music Association. Based in Rwimi, he is known for his contributions to the music scene, focusing on creating and promoting new and innovative music.</p>
+    </section>
 
-  
-        <h2>Welcome to Love Texture Music</h2>
-        <p>Your source for amazing music experiences.
-        Click the button below to listen to our music</p></br>
-        <button> <a href="playlist.html"> LISTEN NOW </a></button>
-    </section></br></br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div="footer">
-        
-        
-        
-        <script>
-  var music = document.getElementById("music");
-  var playButton = document.getElementById("play");
-  var pauseButton = document.getElementById("pause");
-  var playhead = document.getElementById("elapsed");
-  var timeline = document.getElementById("slider");
-  var timer = document.getElementById("timer");
-  var duration;
-  var currentSongIndex = 0;
-  var playlist = [
-    { src: "Baby_Nah.mp3", title: "Baby Nah", cover: "prince_willz.jpg" },
-    { src: "Bimpe - Prince Willz.mp3", title: "Bimpe", cover: "willz.jpg" },
-    { src: "Tombula - Prince Willz.mp3", title: "Tombula", cover: "prince_willz.jpg" },
-    { src: "Nzikakane - Prince Willz & Doro Weiyz.mp3", title: "Nzikakane", cover: "diehards.jpg" },
-    { src: "Bitware_prince willz ft vikmatic.mp3", title: "Bitware", cover: "logo.jpg" },
-    { src: "WOOLI_PRINCE_WILLZ_FT_ABY_LABY_2023(OFFICIAL_LYRIC_VIDEO)(360p).mp3", title: "Wooli", cover: "diehards.jpg" },
-    
-    // Add cover images for other songs
-  ];
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="https://facebook.com/PrinceWillz" target="_blank">Facebook</a>
+                <a href="https://twitter.com/PrinceWillz" target="_blank">Twitter</a>
+                <a href="https://instagram.com/PrinceWillz" target="_blank">Instagram</a>
+                <!-- Add more social media links as needed -->
+            </div>
+            <div class="newsletter">
+                <form action="#" method="post">
+                    <input type="email" placeholder="Subscribe to our newsletter" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <p>&copy; 2024 Prince Willz. All rights reserved.</p>
+        </div>
+    </footer>
 
-  pauseButton.style.visibility = "hidden";
-  var timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-menu');
+            const overlay = document.querySelector('.overlay');
+            const isMenuVisible = menu.classList.contains('show');
+            
+            if (isMenuVisible) {
+                menu.classList.remove('show');
+                overlay.style.display = 'none';
+            } else {
+                menu.classList.add('show');
+                overlay.style.display = 'block';
+            }
+        }
 
-  music.addEventListener("timeupdate", timeUpdate, false);
+        function closeMenu() {
+            const menu = document.querySelector('.nav-menu');
+            const overlay = document.querySelector('.overlay');
+            
+            menu.classList.remove('show');
+            overlay.style.display = 'none';
+        }
 
-  function timeUpdate() {
-    var playPercent = timelineWidth * (music.currentTime / duration);
-    playhead.style.width = playPercent + "px";
+        // Photo Slider Script
+        let slideIndex = 0;
 
-    var secondsIn = Math.floor(((music.currentTime / duration) / 3.5) * 100);
+        function showSlides() {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach((slide) => {
+                slide.style.display = 'none';  
+            });
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }    
+            slides[slideIndex - 1].style.display = 'block';  
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
 
-    if (secondsIn <= 9) {
-      timer.innerHTML = "0:0" + secondsIn;
-    } else {
-      timer.innerHTML = "0:" + secondsIn;
-    }
-  }
-
-  function playSong(index) {
-    music.src = playlist[index].src;
-    music.play();
-    playButton.style.visibility = "hidden";
-    pauseButton.style.visibility = "visible";
-    document.getElementById("song-title").innerHTML = playlist[index].title;
-    document.getElementById("cover").innerHTML = `<img src="${playlist[index].cover}" alt="Cover Image"/>`;
-    currentSongIndex = index;
-  }
-
-  
-        
-        playButton.onclick = function () {
-    playSong(currentSongIndex);
-  }
-
-  pauseButton.onclick = function () {
-    music.pause();
-    playButton.style.visibility = "visible";
-    pauseButton.style.visibility = "hidden";
-  }
-
-  music.addEventListener("canplaythrough", function () {
-    duration = music.duration;
-  }, false);
-
-  document.querySelector('.step-foreward').addEventListener('click', function () {
-    currentSongIndex = (currentSongIndex + 1) % playlist.length;
-    playSong(currentSongIndex);
-  });
-
-  document.querySelector('.step-backward').addEventListener('click', function () {
-    currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
-    playSong(currentSongIndex);
-  });
-  
-  alert("Hello, Welcome to my love texture music website, listen to the most soothing music of prince Willz and other artists in the association. press ok to continue :)")
-</script>
-
-
-
-
-
- 
-
-<footer>
-    <ul>
-        <li><a href="Terms of service.html">Terms of Service</a></li>
-        <li><a href="privacy policy.html">Privacy Policy</a></li>
-    </ul>
-        <p>&copy; 2023 Love Texture Music. All rights reserved.</p>
-    </footer></div>
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlides();
+        });
+    </script>
 </body>
-
-</html>
-
+    </html>
